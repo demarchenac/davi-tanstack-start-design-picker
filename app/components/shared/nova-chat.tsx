@@ -5,7 +5,7 @@ import { X, Send, Bot, User } from 'lucide-react'
 interface NovaChatProps {
   isOpen: boolean
   onClose: () => void
-  theme?: 'dark' | 'light' | 'glass' | 'warm' | 'earth'
+  theme?: 'dark' | 'light' | 'glass' | 'warm' | 'earth' | 'luxe' | 'forest' | 'ember'
 }
 
 interface Message {
@@ -61,6 +61,30 @@ const themeStyles: Record<string, { container: string; header: string; bubble: s
     novaBubble: 'bg-gradient-to-r from-emerald-50 to-amber-50 text-stone-800 border border-emerald-200',
     input: 'bg-white border-stone-200 text-stone-800 placeholder:text-stone-400',
     button: 'bg-gradient-to-r from-emerald-600 to-amber-600 text-white hover:from-emerald-500 hover:to-amber-500',
+  },
+  luxe: {
+    container: 'bg-[#111111] border-amber-500/30',
+    header: 'bg-gradient-to-r from-amber-600 to-yellow-500 text-white',
+    bubble: 'bg-[#1a1714] text-white',
+    novaBubble: 'bg-gradient-to-r from-amber-600/20 to-yellow-500/20 text-amber-100 border border-amber-500/20',
+    input: 'bg-[#1a1714] border-amber-500/30 text-white placeholder:text-amber-300/40',
+    button: 'bg-gradient-to-r from-amber-600 to-yellow-500 text-white hover:from-amber-500 hover:to-yellow-400',
+  },
+  forest: {
+    container: 'bg-[#0a1a0e] border-[#4a5e43]/30',
+    header: 'bg-gradient-to-r from-[#344a2e] to-[#4a5e43] text-white',
+    bubble: 'bg-[#111] text-white',
+    novaBubble: 'bg-gradient-to-r from-[#344a2e]/15 to-[#4a5e43]/15 text-neutral-100 border border-[#4a5e43]/15',
+    input: 'bg-[#111] border-[#4a5e43]/20 text-white placeholder:text-neutral-500',
+    button: 'bg-gradient-to-r from-[#344a2e] to-[#4a5e43] text-white hover:from-[#4a5e43] hover:to-[#6b7f62]',
+  },
+  ember: {
+    container: 'bg-[#0d0a06] border-[#7a6040]/30',
+    header: 'bg-gradient-to-r from-[#5a472f] to-[#7a6040] text-white',
+    bubble: 'bg-[#151210] text-white',
+    novaBubble: 'bg-gradient-to-r from-[#5a472f]/15 to-[#7a6040]/15 text-neutral-100 border border-[#7a6040]/15',
+    input: 'bg-[#151210] border-[#7a6040]/20 text-white placeholder:text-neutral-500',
+    button: 'bg-gradient-to-r from-[#5a472f] to-[#7a6040] text-white hover:from-[#7a6040] hover:to-[#9b7f5a]',
   },
 }
 

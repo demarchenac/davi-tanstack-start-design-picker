@@ -11,7 +11,7 @@ function DesignPicker() {
         <div className="text-center mb-16">
           <img src="/logo.svg" alt="Synnova" className="h-12 mx-auto mb-6 invert" />
           <h1 className="text-4xl font-bold mb-4">Selector de Disenos</h1>
-          <p className="text-neutral-400 text-lg">Explora 5 propuestas creativas para la landing page de Synnova</p>
+          <p className="text-neutral-400 text-lg">Explora 12 propuestas creativas para la landing page de Synnova</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {designs.map((d) => (
@@ -76,5 +76,47 @@ const designs = [
     name: 'Tierra Viva',
     description: 'Naturaleza y tecnologia, tonos tierra y metaforas de crecimiento',
     thumbnail: '/thumbnails/design5.png',
+  },
+  {
+    id: '6',
+    name: 'Noir Dorado',
+    description: 'Elegancia premium en negro profundo con acentos dorados y tonos champan',
+    thumbnail: '/thumbnails/design6.png',
+  },
+  {
+    id: '7',
+    name: 'Musgo Profundo',
+    description: 'Bosque encantado nocturno con verdes musgo desaturados, particulas terrosas y acentos de liquen',
+    thumbnail: '/thumbnails/design7.png',
+  },
+  {
+    id: '8',
+    name: 'Resina Ambar',
+    description: 'Tonos ambar-marron calidos sobre negro profundo, particulas de resina y acentos de brasa',
+    thumbnail: '/thumbnails/design8.png',
+  },
+  {
+    id: '9',
+    name: 'Ciruela Electrica',
+    description: 'Editorial magazine con tipografia serif, composiciones asimetricas y palette plum/magenta electrico',
+    thumbnail: '/thumbnails/design9.png',
+  },
+  {
+    id: '10',
+    name: 'Tinta Editorial',
+    description: 'Estetica editorial en crema y tinta profunda con acentos bermellon',
+    thumbnail: '/thumbnails/design10.png',
+  },
+  {
+    id: '11',
+    name: 'Marfil Regio',
+    description: 'Editorial calido y prestigioso en crema con borgona y acentos de oro antiguo',
+    thumbnail: '/thumbnails/design11.png',
+  },
+  {
+    id: '12',
+    name: 'Cobre Nocturno',
+    description: 'Editorial nocturno de prestigio con cobre brunido sobre negro calido',
+    thumbnail: '/thumbnails/design12.png',
   },
 ]
