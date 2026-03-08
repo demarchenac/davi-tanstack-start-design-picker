@@ -47,11 +47,11 @@ const themeStyles: Record<string, { container: string; header: string; bubble: s
     button: 'bg-gradient-to-r from-indigo-600 to-emerald-500 text-white hover:from-indigo-500 hover:to-emerald-400',
   },
   glass: {
-    container: 'bg-white/10 backdrop-blur-xl border-white/20',
+    container: 'bg-violet-950/80 backdrop-blur-xl border-violet-400/20',
     header: 'bg-gradient-to-r from-violet-600 to-indigo-500 text-white',
-    bubble: 'bg-white/10 backdrop-blur text-white',
-    novaBubble: 'bg-white/15 backdrop-blur text-white border border-white/10',
-    input: 'bg-white/10 backdrop-blur border-white/20 text-white placeholder:text-white/40',
+    bubble: 'bg-violet-900/60 backdrop-blur text-violet-100',
+    novaBubble: 'bg-violet-800/40 backdrop-blur text-violet-50 border border-violet-400/15',
+    input: 'bg-violet-900/60 backdrop-blur border-violet-400/20 text-white placeholder:text-violet-300/60',
     button: 'bg-gradient-to-r from-violet-600 to-indigo-500 text-white hover:from-violet-500 hover:to-indigo-400',
   },
   earth: {
