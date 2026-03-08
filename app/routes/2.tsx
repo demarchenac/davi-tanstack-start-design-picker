@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import { NovaChat } from '@/components/shared/nova-chat'
 import { testimonials, faqs, stats, blogPosts, features } from '@/components/shared/content'
+import { LogoMarquee } from '@/components/shared/logo-marquee'
 
 export const Route = createFileRoute('/2')({
   component: Design2,
@@ -157,18 +158,11 @@ function Design2() {
       <WaveDivider color="#fff7ed" />
 
       {/* Social Proof */}
-      <section className="bg-orange-50/50 py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-center text-sm text-stone-400 font-bold uppercase tracking-widest mb-6">
-            Mas de 500 empresas ya confian en nosotros
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-10 gap-y-3">
-            {['Grupo Exito', 'Rappi', 'Bancolombia', 'Nutresa', 'Corona', 'Alpina', 'Totto', 'Juan Valdez'].map((name) => (
-              <span key={name} className="text-stone-300 font-bold text-lg">{name}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LogoMarquee
+        bgColor="#fff7ed"
+        label="Mas de 500 empresas ya confian en nosotros"
+        labelClassName="text-center text-sm text-stone-400 font-bold uppercase tracking-widest mb-6"
+      />
 
       {/* Stats */}
       <section className="bg-white py-20">

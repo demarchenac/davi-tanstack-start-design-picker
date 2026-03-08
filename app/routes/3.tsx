@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import { NovaChat } from '@/components/shared/nova-chat'
 import { testimonials, faqs, stats, blogPosts, features } from '@/components/shared/content'
+import { LogoMarquee } from '@/components/shared/logo-marquee'
 
 export const Route = createFileRoute('/3')({
   component: Design3,
@@ -155,18 +156,10 @@ function Design3() {
       </section>
 
       {/* Social Proof */}
-      <section className="py-12 border-y border-neutral-100 bg-neutral-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-center text-xs text-neutral-400 font-bold uppercase tracking-[0.2em] mb-6">
-            Empresas que confian en Synnova
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-3">
-            {['Grupo Exito', 'Rappi', 'Bancolombia', 'Nutresa', 'Corona', 'Alpina', 'Totto', 'Juan Valdez'].map((name) => (
-              <span key={name} className="text-neutral-300 font-bold text-lg">{name}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LogoMarquee
+        bgColor="#fafafa"
+        labelClassName="text-center text-xs text-neutral-400 font-bold uppercase tracking-[0.2em] mb-6"
+      />
 
       {/* Features - Bento Grid */}
       <section id="servicios" className="py-24 bg-white">

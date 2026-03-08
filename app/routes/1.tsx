@@ -9,6 +9,7 @@ import {
 } from 'lucide-react'
 import { NovaChat } from '@/components/shared/nova-chat'
 import { testimonials, faqs, stats, blogPosts, features } from '@/components/shared/content'
+import { LogoMarquee } from '@/components/shared/logo-marquee'
 
 export const Route = createFileRoute('/1')({
   component: Design1,
@@ -258,18 +259,12 @@ function Design1() {
       </section>
 
       {/* Social Proof */}
-      <section className="relative z-10 py-16 border-y border-blue-500/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-center text-sm text-blue-300/40 uppercase tracking-widest mb-8">
-            Empresas que confian en Synnova
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-4">
-            {['Grupo Exito', 'Rappi', 'Bancolombia', 'Nutresa', 'Corona', 'Alpina', 'Totto', 'Juan Valdez'].map((name) => (
-              <span key={name} className="text-blue-300/20 font-semibold text-lg hover:text-blue-300/40 transition-colors">{name}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LogoMarquee
+        bgColor="#060918"
+        className="relative z-10"
+        labelClassName="text-center text-sm text-blue-300/40 uppercase tracking-widest mb-8"
+        logoClassName="h-8 max-w-[120px] object-contain brightness-0 invert opacity-20 hover:opacity-60 transition-all duration-300"
+      />
 
       {/* Stats */}
       <section className="relative z-10 py-24">

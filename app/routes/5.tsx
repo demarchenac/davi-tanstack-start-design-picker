@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import { NovaChat } from '@/components/shared/nova-chat'
 import { testimonials, faqs, stats, blogPosts, features } from '@/components/shared/content'
+import { LogoMarquee } from '@/components/shared/logo-marquee'
 
 export const Route = createFileRoute('/5')({
   component: Design5,
@@ -195,18 +196,11 @@ function Design5() {
       </section>
 
       {/* Social Proof */}
-      <section className="py-12 bg-white border-y border-stone-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-center text-sm text-stone-400 font-semibold uppercase tracking-widest mb-6">
-            Empresas que crecen con Synnova
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-3">
-            {['Grupo Exito', 'Rappi', 'Bancolombia', 'Nutresa', 'Corona', 'Alpina', 'Totto', 'Juan Valdez'].map((name) => (
-              <span key={name} className="text-stone-300 font-semibold text-lg">{name}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LogoMarquee
+        bgColor="#ffffff"
+        label="Empresas que crecen con Synnova"
+        labelClassName="text-center text-sm text-stone-400 font-semibold uppercase tracking-widest mb-6"
+      />
 
       {/* Stats */}
       <section className="py-20 bg-stone-50">

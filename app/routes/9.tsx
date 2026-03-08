@@ -8,7 +8,8 @@ import {
   Bot, ExternalLink, Plus, Minus
 } from 'lucide-react'
 import { NovaChat } from '@/components/shared/nova-chat'
-import { socialProofLogos, testimonials, faqs, stats, blogPosts, features } from '@/components/shared/content'
+import { testimonials, faqs, stats, blogPosts, features } from '@/components/shared/content'
+import { LogoMarquee } from '@/components/shared/logo-marquee'
 
 export const Route = createFileRoute('/9')({
   component: Design9,
@@ -53,7 +54,6 @@ function AnimatedCounter({ value, label }: { value: string; label: string }) {
 function Design9() {
   const [chatOpen, setChatOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
-  const marqueeRef = useRef<HTMLDivElement>(null)
   const blogScrollRef = useRef<HTMLDivElement>(null)
 
   const stagger = {
@@ -68,9 +68,6 @@ function Design9() {
   return (
     <div className="min-h-screen overflow-x-hidden" style={{ background: '#1a0a2e', color: '#e2d5f3', fontFamily: "'DM Sans', sans-serif" }}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .marquee-track { animation: marquee 30s linear infinite; }
-        .marquee-track:hover { animation-play-state: paused; }
         .blog-scroll::-webkit-scrollbar { display: none; }
         .blog-scroll { -ms-overflow-style: none; scrollbar-width: none; scroll-snap-type: x mandatory; }
         .blog-scroll > * { scroll-snap-align: start; }
@@ -145,13 +142,12 @@ function Design9() {
       </section>
 
       {/* Social Proof -- Marquee */}
-      <section className="py-8 border-y overflow-hidden" style={{ borderColor: 'rgba(217,70,239,0.1)' }}>
-        <div ref={marqueeRef} className="marquee-track flex items-center gap-16 whitespace-nowrap" style={{ width: 'max-content' }}>
-          {[...socialProofLogos, ...socialProofLogos].map((name, i) => (
-            <span key={i} className="text-sm tracking-[0.2em] uppercase" style={{ color: 'rgba(226,213,243,0.25)' }}>{name}</span>
-          ))}
-        </div>
-      </section>
+      <LogoMarquee
+        bgColor="#1a0a2e"
+        label=""
+        className="py-8"
+        logoClassName="h-8 max-w-[120px] object-contain brightness-0 invert opacity-20 hover:opacity-60 transition-all duration-300"
+      />
 
       {/* Stats -- 4-column with vertical rules */}
       <section className="py-32">

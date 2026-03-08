@@ -7,7 +7,8 @@ import {
   Play, Bot, Plus, Minus
 } from 'lucide-react'
 import { NovaChat } from '@/components/shared/nova-chat'
-import { socialProofLogos, testimonials, faqs, stats, blogPosts, features } from '@/components/shared/content'
+import { testimonials, faqs, stats, blogPosts, features } from '@/components/shared/content'
+import { LogoMarquee } from '@/components/shared/logo-marquee'
 
 export const Route = createFileRoute('/11')({
   component: Design11,
@@ -127,19 +128,12 @@ function Design11() {
         </motion.div>
       </section>
 
-      {/* Social Proof -- Static with diamond ornaments */}
-      <section className="py-10 border-y" style={{ borderColor: 'rgba(107,29,42,0.08)' }}>
-        <div className="max-w-[1200px] mx-auto px-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
-          {socialProofLogos.map((name, i) => (
-            <span key={i} className="flex items-center gap-6">
-              <span className="text-xs tracking-[0.25em] uppercase" style={{ color: 'rgba(45,41,38,0.3)' }}>{name}</span>
-              {i < socialProofLogos.length - 1 && (
-                <span className="w-1 h-1 rotate-45 inline-block" style={{ background: '#b8860b' }} />
-              )}
-            </span>
-          ))}
-        </div>
-      </section>
+      {/* Social Proof -- Marquee */}
+      <LogoMarquee
+        bgColor="#faf6f0"
+        label=""
+        className="py-8"
+      />
 
       {/* Stats -- 2x2 bordered grid */}
       <section className="py-28">

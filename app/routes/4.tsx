@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import { NovaChat } from '@/components/shared/nova-chat'
 import { testimonials, faqs, stats, blogPosts, features } from '@/components/shared/content'
+import { LogoMarquee } from '@/components/shared/logo-marquee'
 
 export const Route = createFileRoute('/4')({
   component: Design4,
@@ -131,9 +132,9 @@ function Design4() {
                     { label: 'Eficiencia', value: '94.7%', change: '+8%', color: 'text-sky-600' },
                   ].map((s) => (
                     <div key={s.label} className="bg-white/50 backdrop-blur rounded-xl p-4 border border-white/40">
-                      <div className="text-xs text-neutral-400 font-medium mb-1">{s.label}</div>
+                      <div className="text-xs text-neutral-600 font-medium mb-1">{s.label}</div>
                       <div className={`text-2xl font-bold ${s.color}`}>{s.value}</div>
-                      <div className="text-xs text-emerald-500 font-semibold">{s.change}</div>
+                      <div className="text-xs text-emerald-600 font-semibold">{s.change}</div>
                     </div>
                   ))}
                 </div>
@@ -149,18 +150,12 @@ function Design4() {
       </section>
 
       {/* Social Proof */}
-      <section className="relative py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-center text-sm text-neutral-400 font-medium uppercase tracking-widest mb-8">
-            Empresas que confian en Synnova
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-4">
-            {['Grupo Exito', 'Rappi', 'Bancolombia', 'Nutresa', 'Corona', 'Alpina', 'Totto', 'Juan Valdez'].map((name) => (
-              <span key={name} className="text-neutral-300 font-semibold text-lg">{name}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LogoMarquee
+        bgColor="rgb(237, 233, 254)"
+        labelClassName="text-center text-sm text-neutral-600 font-medium uppercase tracking-widest mb-8"
+        mode="text"
+        textClassName="text-lg font-bold text-neutral-800/25 hover:text-violet-600/50 transition-colors duration-300 select-none"
+      />
 
       {/* Stats */}
       <section className="relative py-20">
@@ -171,7 +166,7 @@ function Design4() {
                 <div className="text-4xl font-bold bg-gradient-to-r from-violet-600 to-indigo-500 bg-clip-text text-transparent">
                   {stat.value}
                 </div>
-                <div className="text-neutral-400 mt-2 text-sm font-medium">{stat.label}</div>
+                <div className="text-neutral-600 mt-2 text-sm font-medium">{stat.label}</div>
               </GlassCard>
             ))}
           </div>
@@ -285,7 +280,7 @@ function Design4() {
                     </div>
                     <div>
                       <div className="font-bold text-sm">{t.name}</div>
-                      <div className="text-xs text-neutral-400">{t.role} · {t.company}</div>
+                      <div className="text-xs text-neutral-500">{t.role} · {t.company}</div>
                     </div>
                   </div>
                 </GlassCard>
@@ -355,7 +350,7 @@ function Design4() {
                 <GlassCard className="rounded-2xl p-6 h-full cursor-pointer">
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-xs bg-violet-100/50 text-violet-600 px-3 py-1 rounded-full font-semibold">{post.category}</span>
-                    <span className="text-xs text-neutral-400 flex items-center gap-1">
+                    <span className="text-xs text-neutral-500 flex items-center gap-1">
                       <Calendar className="w-3 h-3" />{post.date}
                     </span>
                   </div>
@@ -416,11 +411,11 @@ function Design4() {
             <GlassCard className="rounded-2xl p-6" hover={false}>
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-2 gap-4">
-                  <input type="text" placeholder="Nombre" className="bg-white/50 backdrop-blur border border-white/40 rounded-xl px-4 py-3 text-sm placeholder:text-neutral-300 outline-none focus:border-violet-300 transition-all" />
-                  <input type="email" placeholder="Email" className="bg-white/50 backdrop-blur border border-white/40 rounded-xl px-4 py-3 text-sm placeholder:text-neutral-300 outline-none focus:border-violet-300 transition-all" />
+                  <input type="text" placeholder="Nombre" className="bg-white/50 backdrop-blur border border-white/40 rounded-xl px-4 py-3 text-sm placeholder:text-neutral-400 outline-none focus:border-violet-300 transition-all" />
+                  <input type="email" placeholder="Email" className="bg-white/50 backdrop-blur border border-white/40 rounded-xl px-4 py-3 text-sm placeholder:text-neutral-400 outline-none focus:border-violet-300 transition-all" />
                 </div>
-                <input type="text" placeholder="Empresa" className="w-full bg-white/50 backdrop-blur border border-white/40 rounded-xl px-4 py-3 text-sm placeholder:text-neutral-300 outline-none focus:border-violet-300 transition-all" />
-                <textarea placeholder="¿En que podemos ayudarte?" rows={4} className="w-full bg-white/50 backdrop-blur border border-white/40 rounded-xl px-4 py-3 text-sm placeholder:text-neutral-300 outline-none focus:border-violet-300 transition-all resize-none" />
+                <input type="text" placeholder="Empresa" className="w-full bg-white/50 backdrop-blur border border-white/40 rounded-xl px-4 py-3 text-sm placeholder:text-neutral-400 outline-none focus:border-violet-300 transition-all" />
+                <textarea placeholder="¿En que podemos ayudarte?" rows={4} className="w-full bg-white/50 backdrop-blur border border-white/40 rounded-xl px-4 py-3 text-sm placeholder:text-neutral-400 outline-none focus:border-violet-300 transition-all resize-none" />
                 <button type="submit" className="w-full bg-gradient-to-r from-violet-600 to-indigo-500 text-white py-3 rounded-xl font-semibold shadow-lg shadow-violet-500/20 hover:shadow-violet-500/30 transition-all">
                   Enviar mensaje
                 </button>
@@ -437,9 +432,9 @@ function Design4() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-2">
                 <img src="/logo.svg" alt="Synnova" className="h-6" />
-                <span className="text-sm text-neutral-400">© 2026 Synnova. Todos los derechos reservados.</span>
+                <span className="text-sm text-neutral-500">© 2026 Synnova. Todos los derechos reservados.</span>
               </div>
-              <div className="flex gap-6 text-sm text-neutral-400">
+              <div className="flex gap-6 text-sm text-neutral-500">
                 <a href="#" className="hover:text-violet-600 transition-colors">Privacidad</a>
                 <a href="#" className="hover:text-violet-600 transition-colors">Terminos</a>
                 <a href="#" className="hover:text-violet-600 transition-colors">Cookies</a>
