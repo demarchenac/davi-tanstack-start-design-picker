@@ -1,7 +1,16 @@
 export const socialProofLogos = [
-  'Grupo Exito', 'Rappi', 'Bancolombia', 'Nutresa', 'Carvajal',
-  'Corona', 'Colombina', 'Alpina', 'Totto', 'Crepes & Waffles',
-  'Juan Valdez', 'Koaj',
+  { name: 'Grupo Exito', logo: '/logos/grupo-exito.png' },
+  { name: 'Rappi', logo: '/logos/rappi.png' },
+  { name: 'Bancolombia', logo: '/logos/bancolombia.png' },
+  { name: 'Nutresa', logo: '/logos/nutresa.png' },
+  { name: 'Carvajal', logo: '/logos/carvajal.png' },
+  { name: 'Corona', logo: '/logos/corona.png' },
+  { name: 'Colombina', logo: '/logos/colombina.svg' },
+  { name: 'Alpina', logo: '/logos/alpina.png' },
+  { name: 'Totto', logo: '/logos/totto.png' },
+  { name: 'Crepes & Waffles', logo: '/logos/crepes-waffles.png' },
+  { name: 'Juan Valdez', logo: '/logos/juan-valdez.png' },
+  { name: 'Koaj', logo: '/logos/koaj.jpg' },
 ]
 
 export const features = [
