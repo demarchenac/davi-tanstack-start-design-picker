@@ -17,6 +17,7 @@ import { Route as R5RouteImport } from './routes/5'
 import { Route as R4RouteImport } from './routes/4'
 import { Route as R3RouteImport } from './routes/3'
 import { Route as R2RouteImport } from './routes/2'
+import { Route as R13RouteImport } from './routes/13'
 import { Route as R12RouteImport } from './routes/12'
 import { Route as R11RouteImport } from './routes/11'
 import { Route as R10RouteImport } from './routes/10'
@@ -63,6 +64,11 @@ const R2Route = R2RouteImport.update({
   path: '/2',
   getParentRoute: () => rootRouteImport,
 } as any)
+const R13Route = R13RouteImport.update({
+  id: '/13',
+  path: '/13',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const R12Route = R12RouteImport.update({
   id: '/12',
   path: '/12',
@@ -95,6 +101,7 @@ export interface FileRoutesByFullPath {
   '/10': typeof R10Route
   '/11': typeof R11Route
   '/12': typeof R12Route
+  '/13': typeof R13Route
   '/2': typeof R2Route
   '/3': typeof R3Route
   '/4': typeof R4Route
@@ -110,6 +117,7 @@ export interface FileRoutesByTo {
   '/10': typeof R10Route
   '/11': typeof R11Route
   '/12': typeof R12Route
+  '/13': typeof R13Route
   '/2': typeof R2Route
   '/3': typeof R3Route
   '/4': typeof R4Route
@@ -126,6 +134,7 @@ export interface FileRoutesById {
   '/10': typeof R10Route
   '/11': typeof R11Route
   '/12': typeof R12Route
+  '/13': typeof R13Route
   '/2': typeof R2Route
   '/3': typeof R3Route
   '/4': typeof R4Route
@@ -143,6 +152,7 @@ export interface FileRouteTypes {
     | '/10'
     | '/11'
     | '/12'
+    | '/13'
     | '/2'
     | '/3'
     | '/4'
@@ -158,6 +168,7 @@ export interface FileRouteTypes {
     | '/10'
     | '/11'
     | '/12'
+    | '/13'
     | '/2'
     | '/3'
     | '/4'
@@ -173,6 +184,7 @@ export interface FileRouteTypes {
     | '/10'
     | '/11'
     | '/12'
+    | '/13'
     | '/2'
     | '/3'
     | '/4'
@@ -189,6 +201,7 @@ export interface RootRouteChildren {
   R10Route: typeof R10Route
   R11Route: typeof R11Route
   R12Route: typeof R12Route
+  R13Route: typeof R13Route
   R2Route: typeof R2Route
   R3Route: typeof R3Route
   R4Route: typeof R4Route
@@ -257,6 +270,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof R2RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/13': {
+      id: '/13'
+      path: '/13'
+      fullPath: '/13'
+      preLoaderRoute: typeof R13RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/12': {
       id: '/12'
       path: '/12'
@@ -301,6 +321,7 @@ const rootRouteChildren: RootRouteChildren = {
   R10Route: R10Route,
   R11Route: R11Route,
   R12Route: R12Route,
+  R13Route: R13Route,
   R2Route: R2Route,
   R3Route: R3Route,
   R4Route: R4Route,

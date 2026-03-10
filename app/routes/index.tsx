@@ -11,7 +11,7 @@ function DesignPicker() {
         <div className="text-center mb-16">
           <img src="/logo.svg" alt="Synnova" className="h-12 mx-auto mb-6 invert" />
           <h1 className="text-4xl font-bold mb-4">Selector de Disenos</h1>
-          <p className="text-neutral-400 text-lg">Explora 12 propuestas creativas para la landing page de Synnova</p>
+          <p className="text-neutral-400 text-lg">Explora 13 propuestas creativas para la landing page de Synnova</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {designs.map((d) => (
@@ -118,5 +118,11 @@ const designs = [
     name: 'Cobre Nocturno',
     description: 'Editorial nocturno de prestigio con cobre brunido sobre negro calido',
     thumbnail: '/thumbnails/design12.png',
+  },
+  {
+    id: '13',
+    name: 'Centro de Cristal',
+    description: 'Glassmorphism premium con centro de comando interactivo, carrusel y mockups detallados',
+    thumbnail: '/thumbnails/design13.png',
   },
 ]
